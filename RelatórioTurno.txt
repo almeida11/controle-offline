@@ -1,0 +1,36 @@
+*RELATORIO DO TURNO*
+*Turno:* Turno nao selecionado!
+*Data:* None
+*Turma:* Turma nao selecionada!
+*Inspetor:* None
+*Produto:* None
+*Bitola:* None
+*Rendimento Metalico Total do Turno:* *RELATORIO DO TURNO*
+*Turno:* 16:00 as 00:00
+*Data:* 
+*Turma:* D
+*Inspetor:* Gabriel
+*Produto:* 
+*Bitola:* 
+*Rendimento Metalico Total do Turno:* *RELATORIO DO TURNO*
+*Turno:* 16:00 as 00:00
+*Data:* sds
+*Turma:* B
+*Inspetor:* Rayson
+*Produto:* 
+*Bitola:* 
+*Rendimento Metalico Total do Turno:* *RELATORIO DO TURNO*
+*Turno:* 16:00 as 00:00
+*Data:* 
+*Turma:* A
+*Inspetor:* Gabriel
+*Produto:* 
+*Bitola:* 
+*Rendimento Metalico Total do Turno:* *RELATORIO DO TURNO*
+*Turno:* 16:00 as 00:00
+*Data:* 
+*Turma:* C
+*Inspetor:* Gabriel
+*Produto:* 
+*Bitola:* 
+*Rendimento Metalico Total do Turno:* 
