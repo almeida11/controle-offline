@@ -1,10 +1,17 @@
+corrida = 3
+produto = 333
+volumes = 3
+volnc = 5
+cmax = 5
+cmin = 6
 ##-------------------------------------------#-------------------------------------------------##
-##-------------------------------------------#-------------------------------------------------##      
-while True:
-    window, event, values = sg.read_all_windows()
-    if window == Tela_Inicial and event == sg.WIN_CLOSED:
-        break
-    if window == Tela_Inicial and event == 'Salvar':
-        Tela_Dados = Report() #chamar a def não a class
-        Tela_Inicial.hide()
-        
+##-----------------------------------CORPO DO RELATÓRIO----------------------------------------##
+##-------------------------------------------#-------------------------------------------------##
+report = open("RelatórioTurno.txt", "a")
+report.write("*-----------------------------------------*""\n"
+"*Corrida:* {}""\n"
+"*Produto:* {}""\n"
+"*Volumes:* {}""\n"
+"*Volumes nao conforme:* {}""\n"
+"*Comprimento Max:* {}""\n"
+"*Comprimento Min:* {}""\n".format(corrida, produto, volumes, volnc, cmax, cmin))

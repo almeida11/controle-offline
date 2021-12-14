@@ -91,38 +91,49 @@ def TelaInicial():
     "*Rendimento Metalico Total do Turno:* ""\n".format(turno_real, data, turma_real, inspetor, produto, bitola))
 ##-------------------------------------------#-------------------------------------------------##
 ##-------------------------------------------#-------------------------------------------------##
-def TelaDados():
-    layout2 = [
-        [sg.Text("Corrida"), sg.Input(key='corrida', size=(15))],
-        [sg.Text("Produto"), sg.Input(key='produtoc')], #acrescentar uma lista de seleção
-        [sg.Text("Volumes"), sg.Input(key='volumes', size=(10))],
-        [sg.Text("Volumes NC"), sg.Input(key='volumesnc', size=(10))],
-        #calcular percentual não conforme
-        [sg.Text("Comprimento Máx"), sg.Input(key='cmax', size=(12))],
-        [sg.Text("Comprimento Mín"), sg.Input(key='cmin', size=(12))], 
+TelaInicial()
 
-        [sg.Button('Incrementar'),sg.Button('Fechar')],
-    ]
-    janela02 = sg.Window('Tela 02').layout(layout2)
-    button, events, values = janela02.read()
-    ##-------------------------------------------#-------------------------------------------------##
-    corrida = values['corrida']
-    produto = values['produtoc']
-    volumes = values['volumes']
-    volnc = values['volumesnc']
-    cmax = values['cmax']
-    cmin = values['cmin']
-    ##-------------------------------------------#-------------------------------------------------##
-    ##-----------------------------------CORPO DO RELATÓRIO----------------------------------------##
-    ##-------------------------------------------#-------------------------------------------------##
-    relatorio = open("RelatórioTurno.txt", "a")
-    relatorio.write("*-----------------------------------------*""\n"
-    "*Corrida:* {}""\n"
-    "*Produto:* {}""\n"
-    "*Volumes:* {}""\n"
-    "*Volumes nao conforme:* {}""\n"
-    "*Comprimento Max:* {}""\n"
-    "*Comprimento Min:* {}""\n".format(corrida, produto, volumes, volnc, cmax, cmin))
+layout2 = [
+    [sg.Text("Corrida"), sg.Input(key='corrida', size=(15))],
+    [sg.Text("Produto"), sg.Input(key='produtoc')], #acrescentar uma lista de seleção
+    [sg.Text("Volumes"), sg.Input(key='volumes', size=(10))],
+    [sg.Text("Volumes NC"), sg.Input(key='volumesnc', size=(10))],
+    #calcular percentual não conforme
+    [sg.Text("Comprimento Máx"), sg.Input(key='cmax', size=(12))],
+    [sg.Text("Comprimento Mín"), sg.Input(key='cmin', size=(12))], 
+
+    [sg.Button('Incrementar'),sg.Button('Fechar')],
+]
+janela02 = sg.Window('Tela 02').layout(layout2)
+button, values = janela02.read()
 ##-------------------------------------------#-------------------------------------------------##
-Tela01 = TelaInicial()
-Tela02 = TelaDados()
+corrida = values['corrida']
+produto = values['produtoc']
+volumes = values['volumes']
+volnc = values['volumesnc']
+cmax = values['cmax']
+cmin = values['cmin']
+##-------------------------------------------#-------------------------------------------------##
+##-----------------------------------CORPO DO RELATÓRIO----------------------------------------##
+##-------------------------------------------#-------------------------------------------------##
+relatorio = open("RelatórioTurno.txt", "a")
+relatorio.write("*-----------------------------------------*""\n"
+"*Corrida:* {}""\n"
+"*Produto:* {}""\n"
+"*Volumes:* {}""\n"
+"*Volumes nao conforme:* {}""\n"
+"*Comprimento Max:* {}""\n"
+"*Comprimento Min:* {}""\n"
+.format(corrida, produto, volumes, volnc, cmax, cmin))
+##-------------------------------------------#-------------------------------------------------##
+while True:
+    window, event, values = sg.read_all_windows()
+    if event == sg.WIN_CLOSED:
+        break
+    if button == 'Fechar':
+        janela02.close()
+        break
+    if button == "Incrementar":
+        janela02.read()
+
+#ajustar troca de janelas...
