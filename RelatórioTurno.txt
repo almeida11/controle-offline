@@ -1,0 +1,23 @@
+*RELATORIO DO TURNO*
+*Turno:* 08:00 as 16:00
+*Data:* adasd
+*Turma:* A
+*Inspetor:* Rayson
+*Produto:* dddddddd
+*Bitola:* ddd
+*Rendimento Metalico Total do Turno:* 
+*-----------------------------------------*
+*Corrida:* ddddddddddddd
+*Produto:* dddddddddd
+*Volumes:* dddddddddd
+*Volumes nao conforme:* ddddddddd
+*Comprimento Max:* dddddddd
+*Comprimento Min:* dddddddd
+*RELATORIO DO TURNO*
+*Turno:* Turno nao selecionado!
+*Data:* 
+*Turma:* Turma nao selecionada!
+*Inspetor:* 
+*Produto:* 
+*Bitola:* 
+*Rendimento Metalico Total do Turno:* 

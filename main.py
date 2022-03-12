@@ -104,25 +104,29 @@ def TelaDados():
         [sg.Button('Incrementar'),sg.Button('Fechar')],
     ]
     janela02 = sg.Window('Tela 02').layout(layout2)
-    button, events, values = janela02.read()
+    button, values = janela02.read()
     ##-------------------------------------------#-------------------------------------------------##
-    corrida = values['corrida']
-    produto = values['produtoc']
-    volumes = values['volumes']
-    volnc = values['volumesnc']
-    cmax = values['cmax']
-    cmin = values['cmin']
-    ##-------------------------------------------#-------------------------------------------------##
-    ##-----------------------------------CORPO DO RELATÓRIO----------------------------------------##
-    ##-------------------------------------------#-------------------------------------------------##
-    relatorio = open("RelatórioTurno.txt", "a")
-    relatorio.write("*-----------------------------------------*""\n"
-    "*Corrida:* {}""\n"
-    "*Produto:* {}""\n"
-    "*Volumes:* {}""\n"
-    "*Volumes nao conforme:* {}""\n"
-    "*Comprimento Max:* {}""\n"
-    "*Comprimento Min:* {}""\n".format(corrida, produto, volumes, volnc, cmax, cmin))
+    #condição para escrever dados de corridas/fechar aplicação
+    if button == "Incrementar":
+        corrida = values['corrida']
+        produto = values['produtoc']
+        volumes = values['volumes']
+        volnc = values['volumesnc']
+        cmax = values['cmax']
+        cmin = values['cmin']
+        ##-------------------------------------------#-------------------------------------------------##
+        ##-----------------------------------CORPO DO RELATÓRIO----------------------------------------##
+        ##-------------------------------------------#-------------------------------------------------##
+        relatorio = open("RelatórioTurno.txt", "a")
+        relatorio.write("*-----------------------------------------*""\n"
+        "*Corrida:* {}""\n"
+        "*Produto:* {}""\n"
+        "*Volumes:* {}""\n"
+        "*Volumes nao conforme:* {}""\n"
+        "*Comprimento Max:* {}""\n"
+        "*Comprimento Min:* {}""\n".format(corrida, produto, volumes, volnc, cmax, cmin))
+    else:
+        exit()
 ##-------------------------------------------#-------------------------------------------------##
 Tela01 = TelaInicial()
 Tela02 = TelaDados()
