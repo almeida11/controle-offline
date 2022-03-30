@@ -1,5 +1,6 @@
 import PySimpleGUI as sg
-
+#PROGRAMA GERANDO DIVERSAS JANELAS, PROCURAR MEIO DE RESETAR INFORMAÇÕES DA TELA
+#AO INVES DE CRIAR UMA NOVA JANELA
 ##-------------------------------------------#-------------------------------------------------##
 ##-------------------------------RELATÓRIO INSPEÇÃO OFFLINE------------------------------------##
 ##-------------------------------------------#-------------------------------------------------##
