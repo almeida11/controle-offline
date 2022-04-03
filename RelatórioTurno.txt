@@ -1,0 +1,8 @@
+*RELATORIO DO TURNO*
+*Turno:* 08:00 as 16:00
+*Data:* 
+*Turma:* D
+*Inspetor:* Vinnicius
+*Produto:* aaa
+*Bitola:* aaa
+*Rendimento Metalico Total do Turno:* 
